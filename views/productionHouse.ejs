@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head', {title: 'movieApp'}); %>
+<body>
+    <%- include('partials/nav'); %>
+    <div style="height: 100%; width: 100%; background-color: rgb(200, 218, 212);">
+        <br><br><br>
+        <h1 style="padding-left: 20px;">Production Houses</h1>
+    </div>
+    <div style="padding-left: 20px; padding-right: 20px;">
+        <br><br>
+        <br><br><br> 
+        <table id="produce">
+            <tr>
+                <th>Name</th>
+                <th>Headquarters</th>
+            </tr>
+            <% data.forEach(el => { %>
+            <tr>
+                <td><%= el.name%></td>
+                <td><%= el.headquarters %></td>
+            </tr>
+            <% }) %>
+        </table>   
+    </div>
+
+
+</body>
+</html> 

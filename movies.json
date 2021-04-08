@@ -1,0 +1,20 @@
+[
+    {
+      "name" : "Nenek gayung",
+      "released_year" : 1995,
+      "genre" : "horor",
+      "ProduceHouseId" : 1
+    },
+    {
+      "name" : "Ketika Cinta Bertasbih",
+      "released_year" : 2002,
+      "genre" : "religious",
+      "ProduceHouseId" : 1
+    },
+    {
+      "name" : "Upin Ipin",
+      "released_year" : 2001,
+      "genre" : "animation",
+      "ProduceHouseId" : 2
+    }
+    ] 

@@ -1,0 +1,22 @@
+[{
+    "MovieId":2,
+    "CastId":null,
+    "role":"lead actor"
+},{
+    "MovieId":null,
+    "CastId":20,
+    "role":"Stutradara"
+},{
+    "MovieId":1,
+    "CastId":null,
+    "role":"kameramen"
+},{
+    "MovieId":1,
+    "CastId":null,
+    "role":"figuran"
+},{
+    "MovieId":3,
+    "CastId":null,
+    "role":"lead actor"
+}
+]

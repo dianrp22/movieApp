@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>List Cast</h2>
+  <a href="/casts/add"><input type="button" value="Add"></a> 
+
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Name</th>
+      <th>Birth Year</th>
+      <th>Phone Number</th>
+      <th>Gender</th>
+      <th>Action</th>
+    </tr>
+   
+        <% for (let i = 0 ; i < data.length; i++ ){%>
+            <tr>
+                <td><%=data[i].fullName%></td>
+                <td><%=data[i].birth_year%></td>
+                <td><%=data[i].phone_number%></td>
+                <td><%=data[i].gender%></td>     
+                <td><a href="casts/edit/<%=data[i].id%>"><input type="button" value="Edit"></a> <a href="casts/delete/<%=data[i].id%>" onclick="return confirm('Are you sure you want to delete this item')"><input type="button" value="Delete"></a> <a href="casts/listmovies/<%=data[i].id%>"><input type="button" value="See Movies"></a> </td>
+        </tr>
+            </tr>
+        <%}%>
+  </table>
+</div>
+
+</body>
+</html>

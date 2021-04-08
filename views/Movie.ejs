@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+  <h2>List Movie</h2>
+  <a href="/movies/add"><input type="button" value="Add Movie"></a> 
+
+  <table class="w3-table w3-striped">
+    <tr>
+      <th>Movie</th>
+      <th>Released Year</th>
+      <th>Genre</th>
+      <th>Production House</th>
+      <th>Action</th>
+    </tr>
+   
+        <% for (let i = 0 ; i < data.length; i++ ){%>
+            <tr>
+                <td><%=data[i].name%></td>s
+                <td><%=data[i].released_year%></td>
+                <td><%=data[i].genre%></td>
+                <% if (data[i].ProduceHouseId === null || !data[i].ProduceHouseId){%>
+                    <td>unknow</td>          
+                <%}else{%>
+                    <td><%=data[i].ProductionHouse.name%></td>
+                <%}%>     
+                <td><a href="/movies/edit/<%=data[i].id%>"><input type="button" value="Edit"></a>|<a href="/movies/delete/<%=data[i].id%>"><input type="button" value="Delete"></a><a href="/movies/addCast/<%=data[i].id %>"><input type="button" value="Add Cast"></a>  </td>
+        </tr>
+            </tr>
+        <%}%>
+  </table>
+</div>
+
+</body>
+</html>

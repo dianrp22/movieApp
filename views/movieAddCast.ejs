@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Cast</title>
+</head>
+<body>
+    <h1>Title Movie: <%=dataMovie[0].name%></h1>
+    <p align="right"><form action="/movies/addCast/<%= dataMovie[0].id %>" method="POST"> 
+    <label>Actor: </label> <br>
+    <select name="actor">
+      <% dataCast.forEach(element => {  %>
+        <option value="<%=element.id%>"> <%= element.fullName%></option>
+      <% }) %>
+    </select>
+    <br><br>
+    <label for="role">Role: </label> <br>
+    <input type="text" name="role" placeholder="e.g Pemeran Utama Wanita"> <br>
+    <button type="submit" value="Submit">Save</button>
+    <button type="reset" value="Reset">Cancel</button>
+  </form></p>
+
+  <h2>List Cast</h2>
+  <table border="1">
+    <tr>
+      <th>Actor</th>
+      <th>Role</th>
+    </tr>
+
+    <% for (let i = 0; i < dataMovie[0].Casts.length; i++) { %> 
+      <tr>
+        <td><%=dataMovie[0].Casts[i].fullName %></td>
+        <td><%=dataMovie[0].Casts[i].MovieCast.role%></td>
+      </tr>
+    <% } %>
+
+  </table>
+
+</body>
+</html> 
+</body>
+</html> 

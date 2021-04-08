@@ -1,0 +1,30 @@
+<html>
+<body>
+  <form action="/movies/edit/<%=data1.id%>" method="post">
+    <label >name</label><br>
+    <input type="text" name="name" value="<%= data1.name %>"><br><br>
+    <label>Released Year</label><br>
+    <input type="number" name="released_year" value="<%=data1.released_year%>"><br><br>
+    <label >Genre</label><br>
+    <select name="genre">
+      <option value="animation" <%= data1.genre === "animation" ? "selected" : "" %>> animation</option>
+      <option value="comedy" <%= data1.genre === "comedy" ? "selected" : "" %>> comedy</option>
+      <option value="drama" <%= data1.genre === "drama" ? "selected" : "" %>> drama</option>
+      <option value="horror" <%= data1.genre === "horror" ? "selected" : "" %>> horror</option>
+      <option value="religious" <%= data1.genre === "religious" ? "selected" : "" %>> religious</option>
+      <option value="thriller" <%= data1.genre === "thriller" ? "selected" : "" %>> thriller</option>
+    </select><br><br>
+
+    <label>Production House</label> <br>
+        <select name="ProductionHouse" >
+            <option value="">---Select---</option>
+            <% for (let i = 0; i < data2.length; i++) { %>
+                <option value="<%= +data2[i].id %>" <%= +data2[i].id === data1.ProductionHouse.id ? "selected" : "";%>> <%= data2[i].name %> </option>
+            <% } %>
+        </select>
+    <br><br>
+    <input type="submit" value="Update">
+    <input type="reset" value="Cancel">
+  </form>
+</body>
+</html>
