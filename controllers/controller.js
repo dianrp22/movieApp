@@ -1,4 +1,4 @@
-//feat s2 s3 s4 s5
+//feat s2 s3 s4 s5 s6
 const { ProductionHouse, Movie, Cast, MovieCast } = require("../models");
 const helper = require("../helper/helper");
 class Controller {
